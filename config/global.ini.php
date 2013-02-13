@@ -12,18 +12,13 @@
 ;--------
 
 [database]
-host = "%%db_host%%"
-username = "%%db_username%%"
-password = "%%db_password%%"
-dbname = "%%db_database%%"
-tables_prefix = "piwik_"
-charset = "utf8"
-
-[superuser]
-login = "fubar"
-password = "5185e8b8fd8a71fc80545e144f91faf2"
-email = "fubar@example.com"
-salt = "97834b565e4ed062a48cb1d4f5b5bb8a"
+host			=
+username		=
+password		=
+dbname			=
+tables_prefix	=
+port			= 3306
+adapter			= PDO_MYSQL
 ; if charset is set to utf8, Piwik will ensure that it is storing its data using UTF8 charset.
 ; it will add a sql query SET at each page view.
 ; Piwik should work correctly without this setting.
@@ -37,6 +32,10 @@ dbname			= piwik_tests
 tables_prefix	= piwiktests_
 port			= 3306
 adapter 		= PDO_MYSQL
+
+[superuser]
+login			= 
+password		=
 
 [Debug]
 ; if set to 1, the archiving process will always be triggered, even if the archive has already been computed
