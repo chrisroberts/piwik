@@ -385,3 +385,4 @@ CREATE TABLE `piwik_user_language` (
   PRIMARY KEY (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+insert into piwik_site (name, main_url, ts_created) values ('example', 'example.com', NOW());
