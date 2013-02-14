@@ -1,3 +1,25 @@
+-- MySQL dump 10.13  Distrib 5.5.29, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: piwik_production
+-- ------------------------------------------------------
+-- Server version	5.5.29-0ubuntu0.12.04.1-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `piwik_access`
+--
+
+DROP TABLE IF EXISTS `piwik_access`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_access` (
@@ -7,6 +29,21 @@ CREATE TABLE `piwik_access` (
   PRIMARY KEY (`login`,`idsite`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_access`
+--
+
+LOCK TABLES `piwik_access` WRITE;
+/*!40000 ALTER TABLE `piwik_access` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_access` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_archive_blob_2013_02`
+--
+
+DROP TABLE IF EXISTS `piwik_archive_blob_2013_02`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_archive_blob_2013_02` (
@@ -22,6 +59,21 @@ CREATE TABLE `piwik_archive_blob_2013_02` (
   KEY `index_period_archived` (`period`,`ts_archived`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_archive_blob_2013_02`
+--
+
+LOCK TABLES `piwik_archive_blob_2013_02` WRITE;
+/*!40000 ALTER TABLE `piwik_archive_blob_2013_02` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_archive_blob_2013_02` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_archive_numeric_2013_02`
+--
+
+DROP TABLE IF EXISTS `piwik_archive_numeric_2013_02`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_archive_numeric_2013_02` (
@@ -38,6 +90,22 @@ CREATE TABLE `piwik_archive_numeric_2013_02` (
   KEY `index_period_archived` (`period`,`ts_archived`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_archive_numeric_2013_02`
+--
+
+LOCK TABLES `piwik_archive_numeric_2013_02` WRITE;
+/*!40000 ALTER TABLE `piwik_archive_numeric_2013_02` DISABLE KEYS */;
+INSERT INTO `piwik_archive_numeric_2013_02` VALUES (1,'done',1,'2013-02-14','2013-02-14',1,'2013-02-14 23:42:33',3),(2,'done',1,'2013-02-13','2013-02-13',1,'2013-02-14 23:42:34',1),(3,'done',1,'2013-02-14','2013-02-14',1,'2013-02-14 23:43:01',3);
+/*!40000 ALTER TABLE `piwik_archive_numeric_2013_02` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_goal`
+--
+
+DROP TABLE IF EXISTS `piwik_goal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_goal` (
@@ -54,6 +122,21 @@ CREATE TABLE `piwik_goal` (
   PRIMARY KEY (`idsite`,`idgoal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_goal`
+--
+
+LOCK TABLES `piwik_goal` WRITE;
+/*!40000 ALTER TABLE `piwik_goal` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_goal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_log_action`
+--
+
+DROP TABLE IF EXISTS `piwik_log_action`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_log_action` (
@@ -66,6 +149,21 @@ CREATE TABLE `piwik_log_action` (
   KEY `index_type_hash` (`type`,`hash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_log_action`
+--
+
+LOCK TABLES `piwik_log_action` WRITE;
+/*!40000 ALTER TABLE `piwik_log_action` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_log_action` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_log_conversion`
+--
+
+DROP TABLE IF EXISTS `piwik_log_conversion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_log_conversion` (
@@ -113,6 +211,21 @@ CREATE TABLE `piwik_log_conversion` (
   KEY `index_idsite_datetime` (`idsite`,`server_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_log_conversion`
+--
+
+LOCK TABLES `piwik_log_conversion` WRITE;
+/*!40000 ALTER TABLE `piwik_log_conversion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_log_conversion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_log_conversion_item`
+--
+
+DROP TABLE IF EXISTS `piwik_log_conversion_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_log_conversion_item` (
@@ -135,6 +248,21 @@ CREATE TABLE `piwik_log_conversion_item` (
   KEY `index_idsite_servertime` (`idsite`,`server_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_log_conversion_item`
+--
+
+LOCK TABLES `piwik_log_conversion_item` WRITE;
+/*!40000 ALTER TABLE `piwik_log_conversion_item` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_log_conversion_item` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_log_link_visit_action`
+--
+
+DROP TABLE IF EXISTS `piwik_log_link_visit_action`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_log_link_visit_action` (
@@ -163,6 +291,21 @@ CREATE TABLE `piwik_log_link_visit_action` (
   KEY `index_idsite_servertime` (`idsite`,`server_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_log_link_visit_action`
+--
+
+LOCK TABLES `piwik_log_link_visit_action` WRITE;
+/*!40000 ALTER TABLE `piwik_log_link_visit_action` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_log_link_visit_action` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_log_profiling`
+--
+
+DROP TABLE IF EXISTS `piwik_log_profiling`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_log_profiling` (
@@ -172,6 +315,21 @@ CREATE TABLE `piwik_log_profiling` (
   UNIQUE KEY `query` (`query`(100))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_log_profiling`
+--
+
+LOCK TABLES `piwik_log_profiling` WRITE;
+/*!40000 ALTER TABLE `piwik_log_profiling` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_log_profiling` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_log_visit`
+--
+
+DROP TABLE IF EXISTS `piwik_log_visit`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_log_visit` (
@@ -238,6 +396,21 @@ CREATE TABLE `piwik_log_visit` (
   KEY `index_idsite_idvisitor` (`idsite`,`idvisitor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_log_visit`
+--
+
+LOCK TABLES `piwik_log_visit` WRITE;
+/*!40000 ALTER TABLE `piwik_log_visit` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_log_visit` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_logger_api_call`
+--
+
+DROP TABLE IF EXISTS `piwik_logger_api_call`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_logger_api_call` (
@@ -253,6 +426,21 @@ CREATE TABLE `piwik_logger_api_call` (
   PRIMARY KEY (`idlogger_api_call`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_logger_api_call`
+--
+
+LOCK TABLES `piwik_logger_api_call` WRITE;
+/*!40000 ALTER TABLE `piwik_logger_api_call` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_logger_api_call` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_logger_error`
+--
+
+DROP TABLE IF EXISTS `piwik_logger_error`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_logger_error` (
@@ -266,6 +454,21 @@ CREATE TABLE `piwik_logger_error` (
   PRIMARY KEY (`idlogger_error`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_logger_error`
+--
+
+LOCK TABLES `piwik_logger_error` WRITE;
+/*!40000 ALTER TABLE `piwik_logger_error` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_logger_error` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_logger_exception`
+--
+
+DROP TABLE IF EXISTS `piwik_logger_exception`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_logger_exception` (
@@ -279,6 +482,21 @@ CREATE TABLE `piwik_logger_exception` (
   PRIMARY KEY (`idlogger_exception`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_logger_exception`
+--
+
+LOCK TABLES `piwik_logger_exception` WRITE;
+/*!40000 ALTER TABLE `piwik_logger_exception` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_logger_exception` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_logger_message`
+--
+
+DROP TABLE IF EXISTS `piwik_logger_message`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_logger_message` (
@@ -288,6 +506,21 @@ CREATE TABLE `piwik_logger_message` (
   PRIMARY KEY (`idlogger_message`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_logger_message`
+--
+
+LOCK TABLES `piwik_logger_message` WRITE;
+/*!40000 ALTER TABLE `piwik_logger_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_logger_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_option`
+--
+
+DROP TABLE IF EXISTS `piwik_option`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_option` (
@@ -298,6 +531,22 @@ CREATE TABLE `piwik_option` (
   KEY `autoload` (`autoload`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_option`
+--
+
+LOCK TABLES `piwik_option` WRITE;
+/*!40000 ALTER TABLE `piwik_option` DISABLE KEYS */;
+INSERT INTO `piwik_option` VALUES ('delete_logs_enable','0',0),('delete_logs_max_rows_per_query','100000',0),('delete_logs_older_than','180',0),('delete_logs_schedule_lowest_interval','7',0),('delete_reports_enable','0',0),('delete_reports_keep_basic_metrics','1',0),('delete_reports_keep_day_reports','0',0),('delete_reports_keep_month_reports','1',0),('delete_reports_keep_range_reports','0',0),('delete_reports_keep_segment_reports','0',0),('delete_reports_keep_week_reports','0',0),('delete_reports_keep_year_reports','1',0),('delete_reports_older_than','12',0),('MobileMessaging_DelegatedManagement','false',0),('piwikUrl','http://172.31.56.141/',1),('SitesManager_DefaultTimezone','America/Los_Angeles',0),('UpdateCheck_LastTimeChecked','1360885286',1),('UpdateCheck_LatestVersion','1.10.1',0),('version_Actions','1.10.1',1),('version_Annotations','1.10.1',1),('version_API','1.10.1',1),('version_core','1.10.1',1),('version_CoreAdminHome','1.10.1',1),('version_CoreHome','1.10.1',1),('version_CorePluginsAdmin','1.10.1',1),('version_CoreUpdater','1.10.1',1),('version_CustomVariables','1.10.1',1),('version_Dashboard','1.10.1',1),('version_DoNotTrack','1.10.1',1),('version_ExampleAPI','0.1',1),('version_ExamplePlugin','0.1',1),('version_ExampleRssWidget','0.1',1),('version_Feedback','1.10.1',1),('version_Goals','1.10.1',1),('version_ImageGraph','1.10.1',1),('version_Installation','1.10.1',1),('version_LanguagesManager','1.10.1',1),('version_Live','1.10.1',1),('version_Login','1.10.1',1),('version_MobileMessaging','1.10.1',1),('version_MultiSites','1.10.1',1),('version_Overlay','1.10.1',1),('version_PDFReports','1.10.1',1),('version_PrivacyManager','1.10.1',1),('version_Provider','1.10.1',1),('version_Proxy','1.10.1',1),('version_Referers','1.10.1',1),('version_SEO','1.10.1',1),('version_SitesManager','1.10.1',1),('version_Transitions','1.10.1',1),('version_UserCountry','1.10.1',1),('version_UserCountryMap','1.10.1',1),('version_UserSettings','1.10.1',1),('version_UsersManager','1.10.1',1),('version_VisitFrequency','1.10.1',1),('version_VisitorInterest','1.10.1',1),('version_VisitsSummary','1.10.1',1),('version_VisitTime','1.10.1',1),('version_Widgetize','1.10.1',1);
+/*!40000 ALTER TABLE `piwik_option` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_report`
+--
+
+DROP TABLE IF EXISTS `piwik_report`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_report` (
@@ -316,6 +565,21 @@ CREATE TABLE `piwik_report` (
   PRIMARY KEY (`idreport`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_report`
+--
+
+LOCK TABLES `piwik_report` WRITE;
+/*!40000 ALTER TABLE `piwik_report` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_report` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_session`
+--
+
+DROP TABLE IF EXISTS `piwik_session`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_session` (
@@ -326,6 +590,21 @@ CREATE TABLE `piwik_session` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_session`
+--
+
+LOCK TABLES `piwik_session` WRITE;
+/*!40000 ALTER TABLE `piwik_session` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_site`
+--
+
+DROP TABLE IF EXISTS `piwik_site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_site` (
@@ -346,6 +625,22 @@ CREATE TABLE `piwik_site` (
   PRIMARY KEY (`idsite`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_site`
+--
+
+LOCK TABLES `piwik_site` WRITE;
+/*!40000 ALTER TABLE `piwik_site` DISABLE KEYS */;
+INSERT INTO `piwik_site` VALUES (1,'example','http://example.com','2013-02-14 12:41:15',0,1,'','','America/Los_Angeles','USD','','','','');
+/*!40000 ALTER TABLE `piwik_site` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_site_url`
+--
+
+DROP TABLE IF EXISTS `piwik_site_url`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_site_url` (
@@ -354,6 +649,21 @@ CREATE TABLE `piwik_site_url` (
   PRIMARY KEY (`idsite`,`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_site_url`
+--
+
+LOCK TABLES `piwik_site_url` WRITE;
+/*!40000 ALTER TABLE `piwik_site_url` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_site_url` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_user`
+--
+
+DROP TABLE IF EXISTS `piwik_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_user` (
@@ -367,6 +677,22 @@ CREATE TABLE `piwik_user` (
   UNIQUE KEY `uniq_keytoken` (`token_auth`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_user`
+--
+
+LOCK TABLES `piwik_user` WRITE;
+/*!40000 ALTER TABLE `piwik_user` DISABLE KEYS */;
+INSERT INTO `piwik_user` VALUES ('anonymous','','anonymous','anonymous@example.org','anonymous','2013-02-14 12:40:19');
+/*!40000 ALTER TABLE `piwik_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_user_dashboard`
+--
+
+DROP TABLE IF EXISTS `piwik_user_dashboard`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_user_dashboard` (
@@ -377,6 +703,21 @@ CREATE TABLE `piwik_user_dashboard` (
   PRIMARY KEY (`login`,`iddashboard`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piwik_user_dashboard`
+--
+
+LOCK TABLES `piwik_user_dashboard` WRITE;
+/*!40000 ALTER TABLE `piwik_user_dashboard` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_user_dashboard` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piwik_user_language`
+--
+
+DROP TABLE IF EXISTS `piwik_user_language`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `piwik_user_language` (
@@ -385,4 +726,23 @@ CREATE TABLE `piwik_user_language` (
   PRIMARY KEY (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-insert into piwik_site (name, main_url, ts_created) values ('example', 'example.com', NOW());
+
+--
+-- Dumping data for table `piwik_user_language`
+--
+
+LOCK TABLES `piwik_user_language` WRITE;
+/*!40000 ALTER TABLE `piwik_user_language` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piwik_user_language` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-02-15 10:44:42
